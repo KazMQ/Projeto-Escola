@@ -16,15 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from cadastro.views import contato
-from cadastro.views import inicio
-from cadastro.views import nome
-from cadastro.views import curso
-from cadastro.views import turma
+from cadastro.views import show, base, aluno_list
+
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', contato),
-    path("alunos",inicio)
+    path('contato/', aluno_list),
+    path('inicio/', show),
+    path('', base)
 ]
 
